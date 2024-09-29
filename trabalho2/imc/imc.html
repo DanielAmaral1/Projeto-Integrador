@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Calculo</h1>
+        <h2>Índice de Massa Corporal</h2>
+    </div>
+    <div class="imagens">
+        <img src="imagens/altura.png" alt="Altura" class="altura">
+        <img src="imagens/peso.png" alt="Peso" class="peso">
+    </div>
+    <div class="inputs">
+        <div class="peso">
+            <h1>Peso:</h1>
+            <input type="number" placeholder="Peso (KG)" id="peso" class="text" required>
+        </div>
+        <div class="altura">
+            <h1>Altura:</h1>
+            <input type="number" placeholder="Altura (CM)" id="altura" class="text" required>
+        </div>
+        <button class="botao"  onclick="calculo()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado:</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>

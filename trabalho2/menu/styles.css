@@ -1,0 +1,249 @@
+@font-face {
+    font-family: 'Codec Pro';
+    font-weight: 800; 
+    src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
+         url('fonts/codec-pro-extrabold.woff') format('woff'),
+         url('fonts/codec-pro-extrabold.ttf') format('truetype');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Codec Pro', sans-serif;
+}
+
+section {
+    padding: 50px; 
+    color: white;
+    display: grid;
+    min-height: 100vh;
+}
+
+.p1{
+    background-image: url('../imagens/9.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.logo {
+    position: absolute;
+    top: 0;
+    left: 280px;
+    height: 75px;
+    margin-top: 20px;
+}
+
+.ki {
+    position: absolute;
+    top: 40px;
+    left: 345px; 
+    color: white;
+}
+
+.text1{
+    color: white;
+    font-size: 100px;
+    margin-left: 280px;
+    margin-top: 40%;
+}
+
+button {
+    font-size: 17px;
+    padding: 0.5em 2em;
+    border: transparent;
+    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+    background: rgb(54, 230, 243);
+    color: white;
+    border-radius: 4px;
+    border-radius: 30px;
+    position: absolute;
+    top: 70%;
+    margin-left: 280px;
+    padding: 25px 40px;
+   }
+   
+   button:hover {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+   }
+   
+   button:active {
+    transform: translate(0em, 0.2em);
+   }
+
+
+   .fisio{
+    display: flex;
+    height: 600px;
+    position: absolute;
+    right: 0;
+    top: 60%; 
+    transform: translateY(-50%);
+    margin-right: 250px;
+    border-radius: 30px;
+}
+
+
+.p2{
+    height: 100vh;
+    background-image: url('../imagens/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text2{
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    padding-top: 150px;
+   }
+
+.destaque{
+    color: rgb(54, 230, 243);
+}
+
+.infor p{
+    font-size: 25px;
+    color: white;
+    text-align: center;
+}
+
+.p3{
+    height: 100vh;
+    background-image: url('../imagens/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.text3{
+    color: rgb(54, 230, 243);
+    font-size: 67px;
+    padding-left: 15%;
+}
+
+.op{
+    color: white;
+    font-size: 35px;
+    text-align: left;
+    margin-top: 40px;
+    padding-left: 15%;
+}
+
+.op2{
+    color: white;
+    font-size: 35px;
+    padding-left: 15%;
+    margin-top: 40px;
+}
+
+.atleta{
+    border-radius: 30px;
+    float: right;
+    padding-right: 20%;
+}
+
+.p4{
+    height: 100vh;
+    background-image: url('../imagens/6.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.infor3 h1{
+    color:rgb(54, 230, 243);
+    font-size: 67px;
+    float: right;
+    padding-right: 30%;
+    padding-top: 10px;
+}
+
+.opp{
+    font-size: 35px;
+    float: right;
+    margin-right: 11%;
+    margin-top: -320px;
+}
+
+.grafico{
+    height: 580px;
+    padding-left: 10%;
+}
+
+footer {
+    background-color: #333;
+    padding: 40px 0;  
+    color: white;  
+    text-align: center;
+  }
+  
+  .footer-container {
+    max-width: 1200px;        
+    margin: 0 auto;           
+  }
+  
+  .footer-logo img {
+    width: 150px;             
+    margin-bottom: 20px;      
+  }
+
+
+.menu-lateral {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.menu-lateral a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.menu-lateral a:hover {
+    color: #f1f1f1;
+}
+
+.menu-lateral .close-btn {
+    position: absolute;
+    top: 0;
+    left: 25px;
+    font-size: 36px;
+}
+
+.open-btn {
+    font-size: 30px;
+    cursor: pointer;
+    color:rgb(54, 230, 243);
+    padding: 0;
+    border: none;
+    background: none;
+    position: absolute;
+    top: 20px;
+    right: 220px;
+    z-index: 1;
+}
+
+.menu-title{
+    color:rgb(54, 230, 243);
+    padding-left: 30px;
+}
+
+
+  
+  
