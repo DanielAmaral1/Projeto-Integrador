@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo de Hop Test</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Cálculo de Hop Test</h1>
+        <h2>Insira os valores abaixo</h2>
+    </div>
+    <div class="inputs">
+        <div class="distancia">
+            <h1>Distância do Salto (m):</h1>
+            <input type="number" placeholder="Distância (m)" id="distancia" class="text" required>
+        </div>
+        <div class="tempo">
+            <h1>Tempo (s):</h1>
+            <input type="number" placeholder="Tempo (s)" id="tempo" class="text" required>
+        </div>
+        <button class="botao" onclick="calculoHopTest()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado:</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>

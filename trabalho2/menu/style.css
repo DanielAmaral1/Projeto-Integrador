@@ -1,0 +1,69 @@
+@font-face {
+    font-family: 'Codec Pro';
+    font-weight: 800; 
+    src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
+         url('fonts/codec-pro-extrabold.woff') format('woff'),
+         url('fonts/codec-pro-extrabold.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Codec Pro', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.escolhas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 300px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+a {
+    padding: 12px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #333;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+a:hover {
+    background-color: #f0f0f0;
+    color: #000;
+    padding-left: 20px;
+}
+
+.menu{
+    color: aqua;
+}

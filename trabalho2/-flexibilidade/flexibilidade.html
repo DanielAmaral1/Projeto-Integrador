@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo de Flexibilidade</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Cálculo de Flexibilidade</h1>
+        <h2>Insira os valores abaixo</h2>
+    </div>
+    <div class="inputs">
+        <div class="altura">
+            <h1>Altura (cm)</h1>
+            <input type="number" placeholder="Altura (cm)" id="altura" class="text" required>
+        </div>
+        <div class="alcance">
+            <h1>Alcance (cm):</h1>
+            <input type="number" placeholder="Alcance (cm)" id="alcance" class="text" required>
+        </div>
+        <button class="botao" onclick="calculoFlexibilidade()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado:</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>

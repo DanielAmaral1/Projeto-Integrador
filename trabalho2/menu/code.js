@@ -1,13 +1,16 @@
-document.getElementById('scrollButton').addEventListener('click', function() {
+document.getElementById('descer2').addEventListener('click', function() {
     document.getElementById('secao2').scrollIntoView({
         behavior: 'smooth'
     });
 });
 
-function abrirMenu() {
-    document.getElementById("menuLateral").style.width = "250px";
-}
+document.getElementById('descer').addEventListener('click', function() {
+    document.getElementById('secao3').scrollIntoView({
+        behavior: 'smooth'
+    });
+});
 
-function fecharMenu() {
-    document.getElementById("menuLateral").style.width = "0";
+
+function irParaPagina() {
+    window.location.href = "calculo.html";
 }

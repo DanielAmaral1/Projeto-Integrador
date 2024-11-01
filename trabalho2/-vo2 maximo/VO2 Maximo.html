@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Cálculo de VO2 Máximo</title>
+</head>
+<body> 
+    <div class="header">
+        <h1>Cálculo de VO2 Máximo</h1>
+        <h2>Insira os valores abaixo</h2>
+    </div>
+    <div class="inputs">
+        <div class="idade">
+            <h1>Idade (anos):</h1>
+            <input type="number" placeholder="Idade (anos)" id="idade" class="text" required>
+        </div>
+        <div class="fc-rep">
+            <h1>Frequência Cardíaca de Repouso (bpm):</h1>
+            <input type="number" placeholder="FC Repouso (bpm)" id="fcRep" class="text" required>
+        </div>
+        <button class="botao" onclick="calculoVO2()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado:</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
