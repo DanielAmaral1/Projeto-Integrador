@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+        <h1>Calculo</h1>
+        <h2>Declínio de Força</h2>
+    </div>
+    <div class="inputs">
+        <div class="forcai">
+            <h1>Força Inicial:</h1>
+            <input type="number" placeholder="Força Inicial" id="forcai" class="text" required>
+        </div>
+        <div class="forcaf">
+            <h1>Força Final:</h1>
+            <input type="number" placeholder="Força Final" id="forcaf" class="text" required>
+        </div>
+      
+        <button class="botao"  onclick="calculo()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado em %:</h1>
+        <span id="resultado"></span>
+    </div>
+
+    <script src="code.js"></script>
+</body>
+</html>
