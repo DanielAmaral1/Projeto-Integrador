@@ -1,7 +1,7 @@
 const resultado = document.getElementById("resultado");
 
 function calculo() {
-    // Captura os valores de forcai e forcaf dentro da função
+    // Captura os valores de forca inicial e forca final dentro da função
     const forcai = parseFloat(document.getElementById("forcai").value);
     const forcaf = parseFloat(document.getElementById("forcaf").value);
     
@@ -9,7 +9,7 @@ function calculo() {
 
     console.log(`Carga: ${forcai}, Distancia: ${forcaf}`);
 
-    // Verifica se os valores são válidos (não vazios ou NaN)
+    // Verifica se os valores são válidos (não vazios ou maiores que zero)
     if (forcai <= 0 || forcaf <= 0) {
         resultado.textContent = "Por favor, insira valores válidos.";
         return;
