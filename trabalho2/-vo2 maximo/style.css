@@ -63,3 +63,17 @@ h2{
     text-align: center;
 }
 
+/* Estilo para o link da seta */
+.back-link {
+    position: absolute;
+    top: 20px; /* Distância do topo */
+    left: 20px; /* Distância da esquerda */
+    z-index: 100; /* Para garantir que fique sobre outros elementos */
+}
+
+/* Estilo para a imagem da seta */
+.back-arrow {
+    width: 50px; /* Ajuste o tamanho da seta conforme necessário */
+    height: 50px;
+}
+
