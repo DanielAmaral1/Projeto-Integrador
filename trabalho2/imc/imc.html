@@ -7,15 +7,16 @@
     <title>Document</title>
 </head>
 <body>
+    <!-- Link para voltar ao menu -->
+    <a href="../menu/teste-1.html" class="back-link">
+        <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
+    </a>
+    
     <div class="header">
         <h1>Calculo</h1>
         <h2>Índice de Massa Corporal</h2>
     </div>
-    <div class="imagens">
-        <img src="imagens/altura.png" alt="Altura" class="altura">
-        <img src="imagens/peso.png" alt="Peso" class="peso">
-    </div>
-    <div class="inputs">
+    <div class="inputs" id="menu">
         <div class="peso">
             <h1>Peso:</h1>
             <input type="number" placeholder="Peso (KG)" id="peso" class="text" required>
@@ -30,6 +31,7 @@
         <h1>Resultado:</h1>
         <span id="resultado"></span>
     </div>
+
 
     <script src="code.js"></script>
 </body>
