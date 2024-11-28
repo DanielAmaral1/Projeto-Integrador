@@ -4,54 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Document</title>
+    <title>Kineva - Alta Performance em Fisioterapia</title>
 </head>
 <body>
+    <header>
+        <div class="header-content">
+            <img src="../imagens/IMG_4700.PNG" alt="Logo" class="header-img">
+            <h1 class="ki">Kineva</h1>
+        </div>
+        <div class="header-buttons">
+            <a href="../menu/menu.html" class="button">Menu</a>
+            <a href="../menu/teste-1.html" class="button">Cálculos</a>
+        </div>
+    </header>
+
     <main>
-        <section class="p1">
-            <div class="conteiner">
-                <img class="logo" src="../imagens/IMG_4700.PNG" alt="Logo">
-                <h1 class="ki">Kineva</h1>
-                <div class="calculo">
-                    <button class="btn-header" id="descer">calculos</button>
-                </div>
-                <h1 class="text1">Alta<br>performace</h1>
-                <img class="fisio" src="../imagens/Screenshot_2.png" alt="Fisio">
-                <button class="Saiba" id="descer2">Saiba mais</button>
+        <!-- Seção Principal -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Alta Performance em Fisioterapia</h1>
+                <p class="hero-subtitle">Transformamos o suporte fisioterapêutico com cálculos precisos.</p>
+                <button class="btn-primary" onclick="scrollToSection('about')">Saiba Mais</button>
+                <button class="btn-secondary" onclick="scrollToSection('calculos')">Página de Cálculos</button>
+            </div>
+            <img class="hero-image" src="../imagens/Screenshot_2.png" alt="Fisioterapeuta">
+        </section>
+
+        <!-- Sobre a Kineva -->
+        <section class="about" id="about">
+            <img class="about-image" src="../imagens/Screenshot_3.png" alt="Fisioterapeuta em ação">
+            <div class="about-content">
+                <h2>Sobre a Kineva</h2> <!-- Título fica dentro do conteúdo -->
+                <p class="descricao-sobre">A Kineva é uma startup focada em transformar o apoio à fisioterapia através de cálculos especializados que auxiliam profissionais a oferecer tratamentos mais eficientes e personalizados.</p>
             </div>
         </section>
-        <section class="p2" id="secao2">
-            <div class="infor">
-                <h1 class="text2">A  <span class="destaque">Kineva</span> é uma startup<br>​focada em transformar o <br>​apoio à fisioterapia por meio <br>​de cálculos especializados.</h1>
-                <p>Nosso sistema foi projetado para auxiliar fisioterapeutas a realizar medições <br>​e avaliações precisas, otimizando o tratamento dos pacientes. Com a <br>​tecnologia da Kineva, buscamos aprimorar o processo de reabilitação,<br> ​oferecendo ferramentas que combinam ciência e inovação, facilitando o <br>​acompanhamento do progresso dos pacientes e permitindo que os <br>​profissionais tomem decisões baseadas em dados mais detalhados e <br>​personalizados.</p>
+
+        <!-- Benefícios -->
+        <section class="benefits">
+            <h2>Benefícios da Kineva</h2>
+            <div class="benefit-item">
+                <h3>Cálculos Precisos</h3>
+                <p>Realize medições precisas para otimizar os tratamentos dos seus pacientes.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Monitoramento Detalhado</h3>
+                <p>Acompanhe o progresso dos pacientes com dados claros e confiáveis.</p>
+            </div>
+            <div class="benefit-item">
+                <h3>Automatização de Resultados</h3>
+                <p>Substitua métodos manuais por análises rápidas e automáticas.</p>
             </div>
         </section>
-        <section class="p3" id="secao3">
-            <div class="infor2">
-                <img class="atleta" src="../imagens/Screenshot_3.png" alt="">
-                <h1 class="text3">Realize cálculos <br>​precisos</h1>
-                <p class="op">Use o Kineva para realizar cálculos que auxiliam <br>​nas avaliações fisioterapêuticas e otimizam os <br>​resultados dos seus pacientes.</p>
-                <p class="op2">O Kineva permite que você obtenha dados <br>​detalhados, oferecendo um suporte essencial <br>​para profissionais da fisioterapia. Com <br>​ferramentas avançadas, você poderá realizar <br>​medições e cálculos de forma rápida e eficiente, <br>​proporcionando maior precisão nas avaliações <br>​e tratamentos.</p>
+
+        <!-- Gráfico e Monitoramento -->
+        <section class="monitoring" id="calculos">
+            <div class="monitoring-content">
+                <h2>Monitore o Progresso</h2>
+                <p>Utilize nossos gráficos e ferramentas avançadas para acompanhar a evolução dos pacientes e tomar decisões com base em dados detalhados.</p>
+                <a href="../menu/teste-1.html" class="button-2">Menu de Cálculos</a>
             </div>
-        </section>
-        <section class="p4">
-            <div class="infor3">
-                <img class="grafico" src="../imagens/Screenshot_5.png" alt="">
-                <h1>Monitore o <br>​progresso</h1>
-                <p class="opp">O sistema de cálculo da Kineva substitui <br>métodos manuais, oferecendo análises <br>​automáticas e rápidas dos resultados.<br><br><br>Nossos testes especializados vão mudar a <br>maneira como você lida com avaliações <br>​fisioterapêuticas, permitindo que você <br>​acompanhe o progresso dos pacientes com <br>​maior precisão e eficiência, facilitando o <br>​ajuste e aprimoramento dos tratamentos.</p>
-                <button class="btn-calculo" onclick="irParaPagina()">Pagina De Calculos</button>
-            </div>
+            <img class="monitoring-image" src="../imagens/Screenshot_5.png" alt="Gráfico de monitoramento">
         </section>
     </main>
+
     <footer>
         <div class="footer-container">
-          <div class="footer-logo">
-            <img src="../imagens/IMG_4700.PNG" alt="Logo da Empresa" />
-          </div>
-          </div>
-          <p>&copy; 2024 Kinea. Todos os direitos reservados.</p>
+            <img src="../imagens/IMG_4700.PNG" alt="Logo da Kineva" />
+            <p>&copy; 2024 Kineva. Todos os direitos reservados.</p>
         </div>
-      </footer>
-    <script src="code.js"></script>
+    </footer>
+
+    <script>
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function irParaPagina() {
+            window.location.href = "pagina-de-calculos.html";
+        }
+    </script>
 </body>
 </html>
