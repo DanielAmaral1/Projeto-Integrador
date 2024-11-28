@@ -1,79 +1,40 @@
-@font-face {
-    font-family: 'Codec Pro';
-    font-weight: 800; 
-    src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
-         url('fonts/codec-pro-extrabold.woff') format('woff'),
-         url('fonts/codec-pro-extrabold.ttf') format('truetype');
-}
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Link para voltar ao menu -->
+    <a href="../menu/teste-1.html" class="back-link">
+        <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
+    </a>
+    <div class="header">
+        <h1>Calculo</h1>
+        <h2>Potência Anaeróbia com o Teste de Wingate</h2>
+    </div>
+    <div class="inputs">
+        <div class="carga">
+            <h1>Carga(N):</h1>
+            <input type="number" placeholder="Carga (N)" id="carga" class="text" required>
+        </div>
+        <div class="distancia">
+            <h1>Distância(m):</h1>
+            <input type="number" placeholder="Distância (m)" id="distancia" class="text" required>
+        </div>
+        <div class="tempo">
+            <h1>Tempo(s):</h1>
+            <input type="number" placeholder="Tempo (s)" id="tempo" class="text" required>
+        </div>
+        <button class="botao"  onclick="calculo()">Calcular</button>
+    </div>
+    <div class="resultado">
+        <h1>Resultado em Wats:</h1>
+        <span id="resultado"></span>
+    </div>
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Codec Pro', sans-serif;
-    height: 100vh;
-    background-image: url('../imagens/6.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.header h1{
-    font-size: 60px;
-    color:rgb(54, 230, 243);
-    text-align: center;
-    margin-top: 10%;
-}
-
-h2{
-    text-align: center;
-    color: white;
-}
-
-.text{
-    display: flex;
-    text-align: center;
-    border-radius: 30px;
-    height: 60px;
-    width: 700px;
-}
-
-.inputs{
-    font-size: 20px;
-    color:rgb(54, 230, 243);
-    text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-.botao{
-    border-radius: 30px;
-    height: 60px;
-    width: 300px;
-}
-
-.resultado{
-    text-align: center;
-    color: white;
-    font-size: 20px;
-    color:rgb(54, 230, 243);
-    text-align: center;
-}
-
-/* Estilo para o link da seta */
-.back-link {
-    position: absolute;
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
-    z-index: 100; /* Para garantir que fique sobre outros elementos */
-}
-
-/* Estilo para a imagem da seta */
-.back-arrow {
-    width: 50px; /* Ajuste o tamanho da seta conforme necessário */
-    height: 50px;
-}
-
+    <script src="code.js"></script>
+</body>
+</html>
