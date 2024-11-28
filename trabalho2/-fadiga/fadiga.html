@@ -4,27 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Cálculo de Declínio de Força</title>
+    <title>Cálculo de Flexibilidade</title>
 </head>
 <body>
-        <!-- Link para voltar ao menu -->
-        <a href="../menu/teste-1.html" class="back-link">
-            <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
-        </a>
+     <!-- Link para voltar ao menu -->
+     <a href="../menu/teste-1.html" class="back-link">
+        <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
+    </a>
     <div class="header">
-        <h1>Cálculo de Declínio de Força</h1>
+        <h1>Cálculo de Flexibilidade</h1>
         <h2>Insira os valores abaixo</h2>
     </div>
     <div class="inputs">
-        <div class="forcaInicial">
-            <h1>Força Inicial (N)</h1>
-            <input type="number" placeholder="Força Inicial (N)" id="forcaInicial" class="text" required>
+        <div class="altura">
+            <h1>Altura (cm)</h1>
+            <input type="number" placeholder="Altura (cm)" id="altura" class="text" required>
         </div>
-        <div class="forcaFinal">
-            <h1>Força Final (N):</h1>
-            <input type="number" placeholder="Força Final (N)" id="forcaFinal" class="text" required>
+        <div class="alcance">
+            <h1>Alcance (cm):</h1>
+            <input type="number" placeholder="Alcance (cm)" id="alcance" class="text" required>
         </div>
-        <button class="botao" onclick="calculoDeclinioForca()">Calcular</button>
+        <button class="botao" onclick="calculoFlexibilidade()">Calcular</button>
     </div>
     <div class="resultado">
         <h1>Resultado:</h1>
