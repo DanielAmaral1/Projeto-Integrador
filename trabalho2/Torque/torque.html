@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Cálculo de Torque</title>
 </head>
 <body>
+    <!-- Link para voltar ao menu -->
+    <a href="../menu/teste-1.html" class="back-link">
+        <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
+    </a>
     <div class="header">
-        <h1>Calculo</h1>
-        <h2>Torque
-        </h2>
+        <h1>Cálculo de Torque</h1>
+        <h2>Insira os valores abaixo</h2>
     </div>
     <div class="inputs">
         <div class="forca">
-            <h1>Força:</h1>
-            <input type="number" placeholder=" Digite a Força: " id="forca" class="text" required>
+            <h1>Força (N)</h1>
+            <input type="number" placeholder="Força (N)" id="forca" class="text" required>
         </div>
         <div class="distancia">
-            <h1>Distãncia do ponto de rotação":</h1>
-            <input type="number" placeholder="Digite a distãncia do ponto de rotação:" id="distancia" class="text" required>
+            <h1>Distância (m):</h1>
+            <input type="number" placeholder="Distância (m)" id="distancia" class="text" required>
         </div>
-        <button class="botao"  onclick="calculo()">Calcular</button>
+        <div class="angulo">
+            <h1>Ângulo (graus):</h1>
+            <input type="number" placeholder="Ângulo (°)" id="angulo" class="text" required>
+        </div>
+        <button class="botao" onclick="calculoTorque()">Calcular</button>
     </div>
     <div class="resultado">
         <h1>Resultado:</h1>
