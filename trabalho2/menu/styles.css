@@ -1,191 +1,272 @@
 @font-face {
     font-family: 'Codec Pro';
-    font-weight: 800; 
+    font-weight: 800;
     src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
          url('fonts/codec-pro-extrabold.woff') format('woff'),
          url('fonts/codec-pro-extrabold.ttf') format('truetype');
 }
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: 'Codec Pro', sans-serif;
-}
-section {
-    padding: 50px; 
+    background-color: #14142c; /* Fundo atualizado */
     color: white;
-    display: grid;
-    min-height: 100vh;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
-.p1{
-    background-image: url('../imagens/9.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;
-    background-repeat: no-repeat;
+
+/* Estilo do cabeçalho */
+header {
+    background-color: #14142c; /* Cor de fundo */
+    padding: 0 0 20px 0; /* Remover padding superior, manter o inferior */
     display: flex;
+    justify-content: space-between; /* Espaça a imagem/título e os botões */
+    align-items: center; /* Alinha os itens verticalmente ao centro */
+    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
 }
-.logo {
-    position: absolute;
-    top: 0;
-    left: 280px;
-    height: 75px;
-    margin-top: 20px;
+
+/* Container que segura a imagem e o título */
+.header-content {
+    display: flex;
+    align-items: center; /* Alinha imagem e título verticalmente no centro */
+    margin-top: -30px;
 }
+
+/* Estilo da imagem */
+.header-img {
+    width: 60px; /* Tamanho da imagem */
+    height: auto;
+    margin-right: 30px; /* Espaçamento entre a imagem e o título */
+    margin-top: 35px;
+    margin-left: 20px;
+}
+
+/* Estilo do título (nome da marca) */
 .ki {
-    position: absolute;
-    top: 40px;
-    left: 345px; 
+    font-size: 36px;
     color: white;
+    margin-left: -30px;
+    margin-top: 30px;
 }
-.text1{
-    color: white;
-    font-size: 100px;
-    margin-left: 280px;
-    margin-top: 40%;
-}
-.p1 button {
-    font-size: 17px;
-    padding: 0.5em 2em;
-    border: transparent;
-    box-shadow: 2px 2px 4px rgba(0,0,0,0.4);
-    background: rgb(54, 230, 243);
-    color: white;
-    border-radius: 4px;
-    border-radius: 30px;
-    position: absolute;
-    top: 70%;
-    margin-left: 280px;
-    padding: 25px 40px;
-   }
 
-   .calculo button{
-        left: 15%;
-   }
-   
-   .p1 button:hover {
-    background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
-   }
-   
-   .p1 button:active {
-    transform: translate(0em, 0.2em);
-   }
-   .fisio{
+/* Container dos botões */
+.header-buttons {
     display: flex;
-    height: 600px;
-    position: absolute;
-    right: 0;
-    top: 60%; 
-    transform: translateY(-50%);
-    margin-right: 250px;
-    border-radius: 30px;
+    gap: 15px; /* Espaçamento entre os botões */
+    margin-left: auto; /* Empurra os botões para a direita */
+    margin-top: 15px;
+    margin-right: 20px;
 }
-.p2{
-    height: 100vh;
-    background-image: url('../imagens/6.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.text2{
-    color: white;
-    text-align: center;
-    font-size: 80px;
-    padding-top: 150px;
-   }
-.destaque{
-    color: rgb(54, 230, 243);
-}
-.infor p{
-    font-size: 25px;
-    color: white;
-    text-align: center;
-}
-.p3{
-    height: 100vh;
-    background-image: url('../imagens/6.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.text3{
-    color: rgb(54, 230, 243);
-    font-size: 67px;
-    padding-left: 15%;
-}
-.op{
-    color: white;
-    font-size: 35px;
-    text-align: left;
-    margin-top: 40px;
-    padding-left: 15%;
-}
-.op2{
-    color: white;
-    font-size: 35px;
-    padding-left: 15%;
-    margin-top: 40px;
-}
-.atleta{
-    border-radius: 30px;
-    float: right;
-    padding-right: 20%;
-}
-.p4{
-    height: 100vh;
-    background-image: url('../imagens/6.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.infor3 h1{
-    color:rgb(54, 230, 243);
-    font-size: 67px;
-    float: right;
-    padding-right: 30%;
-    padding-top: 10px;
-}
-.opp{
-    font-size: 35px;
-    float: right;
-    margin-right: 11%;
-    margin-top: -320px;
-}
-.grafico{
-    height: 580px;
-    padding-left: 10%;
-}
-footer {
-    background-color: #333;
-    padding: 40px 0;  
-    color: white;  
-    text-align: center;
-  }
-  
-  .footer-container {
-    max-width: 1200px;        
-    margin: 0 auto;           
-  }
-  
-  .footer-logo img {
-    width: 150px;             
-    margin-bottom: 20px;      
-  }
 
-  .btn-calculo {
-    font-size: 20px;
-    padding: 12px 24px;
+/* Estilos dos botões do cabeçalho */
+.button, .btn-header, .Saiba {
+    font-size: 16px;
+    padding: 8px 24px;
     color: white;
-    background-color: rgb(54, 230, 243);
+    background-color: rgb(54, 230, 243); /* Cor de fundo */
     border: none;
     border-radius: 30px;
     cursor: pointer;
-    position: absolute;
-    top: 260%;
-    left: 65%;
-    transform: translate(-50%, -50%);
-    transition: 0.3s;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Retira o sublinhado */
+    text-align: center; /* Centraliza o texto */
 }
-.btn-calculo:hover {
+
+.button:hover, .btn-header:hover, .Saiba:hover {
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%); /* Efeito de hover */
+    transform: translateY(-5px); /* Sobe um pouco no hover */
+}
+
+.button:active, .btn-header:active, .Saiba:active {
+    transform: translate(0, 0.2em); /* Efeito de clique */
+}
+
+.logo {
+    width: 80px;
+    margin-right: 10px;
+}
+
+.brand-name {
+    font-size: 2rem;
+    color: rgb(54, 230, 243);
+}
+
+.hero {
+    display: flex; /* Usar flexbox para alinhar os itens horizontalmente */
+    justify-content: space-between; /* Espaçar os itens de forma adequada */
+    align-items: center; /* Alinhar os itens verticalmente ao centro */
+    padding: 5rem 2rem;
+    background-color: #14142c; /* Fundo atualizado */
+}
+
+.hero-content {
+    flex: 1; /* Garantir que o conteúdo ocupe o espaço restante */
+    text-align: left; /* Alinhar o texto à esquerda */
+    max-width: 50%; /* Limitar a largura do conteúdo de texto */
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: -10px;
+    margin-left: 70px;
+}
+
+.hero-subtitle {
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #ccc;
+    margin-left: 70px;
+}
+
+.hero-image {
+    max-width: 30%; /* Limitar a largura da imagem */
+    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
+    margin-left: 2rem; /* Espaçamento à esquerda da imagem */
+    margin-right: 250px;
+}
+
+
+.btn-primary, .btn-secondary {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 1rem 0.5rem;
+    margin-left: 100px;
+}
+
+.btn-secondary {
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.2rem;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    margin: 1rem 0.5rem;
+}
+
+.btn-primary {
+    background-color: rgb(54, 230, 243);
+}
+
+.btn-primary:hover {
     background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.btn-secondary {
+    background-color: rgb(54, 230, 243);
+}
+
+.btn-secondary:hover {
+    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+}
+
+.descricao-sobre{
+    margin: 1rem 0;
+    font-size: 1.5rem;
+    color: #ccc;
+}
+
+.about {
+    display: flex; /* Usar flexbox para alinhar a imagem e o texto lado a lado */
+    justify-content: space-between; /* Espaçar os itens de forma adequada */
+    align-items: center; /* Alinhar os itens verticalmente ao centro */
+    padding: 5rem 2rem;
+    background-color: #14142c; /* Fundo atualizado */
+    text-align: left; /* Alinhar o texto à esquerda */
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+.about-content {
+    flex: 1; /* O conteúdo ocupa o espaço disponível */
+    max-width: 50%; /* Limitar a largura do conteúdo */
+}
+
+.benefits {
+    padding: 5rem 2rem;
+    text-align: center;
+    background-color: #14142c; /* Fundo atualizado */
+}
+
+.about-image {
+    max-width: 30%; /* Limitar a largura da imagem */
+    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
+    margin-left: 2rem; /* Espaçamento à esquerda da imagem */
+    margin-left: 150px;
+}
+
+.monitoring {
+    display: flex; /* Alinha os elementos horizontalmente */
+    justify-content: space-between; /* Espaça a imagem e o conteúdo */
+    align-items: center; /* Alinha verticalmente ao centro */
+    padding: 5rem 2rem; /* Espaçamento interno */
+    text-align: left; /* Alinhar o texto à esquerda */
+    background-color: #14142c; /* Fundo atualizado */
+}
+
+.monitoring-content {
+    flex: 1; /* O conteúdo ocupa o espaço disponível */
+    max-width: 50%; /* Limitar a largura do conteúdo */
+    padding-left: 2rem; /* Espaçamento à esquerda */
+    margin-left: 100px;
+}
+
+.monitoring-image {
+    max-width: 35%; /* Limitar a largura da imagem */
+    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
+    margin-right: 5rem; /* Espaçamento entre a imagem e o texto */
+    margin-bottom: 2rem;
+}
+
+.benefit-item {
+    background-color: #110d29;
+    padding: 2rem;
+    margin: 1rem 0;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: #111;
+    text-align: center;
+    padding: 2rem;
+}
+
+.footer-container img {
+    width: 80px;
+    margin-bottom: 1rem;
+}
+
+.button-2{
+    font-size: 20px;
+    font-weight: 600;
+    padding: 25px 80px;
+    color: white;
+    background-color: rgb(54, 230, 243); /* Cor de fundo */
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    text-decoration: none; /* Retira o sublinhado */
+    text-align: center; /* Centraliza o texto */
+    margin-left: 190px;
+}
+
+.monitoring-content p {
+    margin-bottom: 3rem; /* Espaçamento entre o parágrafo e o botão */
+    font-size: 20px;
+    margin-left: 5px;
 }
