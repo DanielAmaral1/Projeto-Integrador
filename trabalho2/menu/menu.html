@@ -15,6 +15,10 @@
         <div class="header-buttons">
             <a href="../menu/menu.html" class="button">Menu</a>
             <a href="../menu/teste-1.html" class="button">Cálculos</a>
+            <label class="theme-switch">
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
         </div>
     </header>
 
@@ -34,7 +38,7 @@
         <section class="about" id="about">
             <img class="about-image" src="../imagens/Screenshot_3.png" alt="Fisioterapeuta em ação">
             <div class="about-content">
-                <h2>Sobre a Kineva</h2> <!-- Título fica dentro do conteúdo -->
+                <h2>Sobre a Kineva</h2>
                 <p class="descricao-sobre">A Kineva é uma startup focada em transformar o apoio à fisioterapia através de cálculos especializados que auxiliam profissionais a oferecer tratamentos mais eficientes e personalizados.</p>
             </div>
         </section>
@@ -63,7 +67,7 @@
                 <p>Utilize nossos gráficos e ferramentas avançadas para acompanhar a evolução dos pacientes e tomar decisões com base em dados detalhados.</p>
                 <a href="../menu/teste-1.html" class="button-2">Menu de Cálculos</a>
             </div>
-            <img class="monitoring-image" src="../imagens/Screenshot_5.png" alt="Gráfico de monitoramento">
+            <img class="monitoring-image" src="../imagens/Screenshot_5-removebg-preview.png" alt="Gráfico de monitoramento">
         </section>
     </main>
 
@@ -75,12 +79,22 @@
     </footer>
 
     <script>
-        function scrollToSection(id) {
-            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+        const themeToggle = document.getElementById('theme-toggle');
+
+        // Carregar tema salvo
+        if (localStorage.getItem('theme') === 'light') {
+            document.body.classList.add('light-theme');
+            themeToggle.checked = true;
         }
 
-        function irParaPagina() {
-            window.location.href = "pagina-de-calculos.html";
+        // Alternar tema
+        themeToggle.addEventListener('change', () => {
+            document.body.classList.toggle('light-theme');
+            localStorage.setItem('theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+        });
+
+        function scrollToSection(id) {
+            document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
         }
     </script>
 </body>
