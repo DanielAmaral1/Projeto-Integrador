@@ -1,113 +1,111 @@
-@font-face {
-    font-family: 'Codec Pro';
-    font-weight: 800;
-    src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
-         url('fonts/codec-pro-extrabold.woff') format('woff'),
-         url('fonts/codec-pro-extrabold.ttf') format('truetype');
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo global para manter o layout consistente entre temas */
 body {
     font-family: 'Codec Pro', sans-serif;
-    background-color: #14142c; /* Fundo atualizado */
-    color: white;
+    background-color: #14142c; /* Cor de fundo para o tema escuro */
+    color: white; /* Cor do texto no tema escuro */
     line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Estilo do cabeçalho */
+h2 {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-top: -10px;/
+}
+
+/* Tema claro aplicado quando a classe 'light-theme' é adicionada ao body */
+body.light-theme {
+    background-color: #ffffff; /* Cor de fundo para o tema claro */
+    color: #333; /* Cor do texto no tema claro */
+}
+
+/* Cabeçalho */
 header {
-    background-color: #14142c; /* Cor de fundo */
-    padding: 0 0 20px 0; /* Remover padding superior, manter o inferior */
+    background-color: #14142c; /* Escuro padrão */
+    padding: 0 0 20px 0;
     display: flex;
-    justify-content: space-between; /* Espaça a imagem/título e os botões */
-    align-items: center; /* Alinha os itens verticalmente ao centro */
-    width: 100%; /* Garante que o cabeçalho ocupe toda a largura */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo para todas as imagens */
+img {
+    border-radius: 15px; /* Altere o valor para o grau de arredondamento que você preferir */
+    object-fit: cover; /* Garantir que as imagens mantenham suas proporções e cobram a área corretamente */
+}
+
+body.light-theme header {
+    background-color: #ffffff; /* Cabeçalho no tema claro */
 }
 
 /* Container que segura a imagem e o título */
 .header-content {
     display: flex;
-    align-items: center; /* Alinha imagem e título verticalmente no centro */
+    align-items: center;
     margin-top: -30px;
 }
 
-/* Estilo da imagem */
 .header-img {
-    width: 60px; /* Tamanho da imagem */
+    width: 60px;
     height: auto;
-    margin-right: 30px; /* Espaçamento entre a imagem e o título */
+    margin-right: 30px;
     margin-top: 35px;
     margin-left: 20px;
 }
 
-/* Estilo do título (nome da marca) */
 .ki {
     font-size: 36px;
     color: white;
     margin-left: -30px;
-    margin-top: 30px;
+    margin-top: 60px;
 }
 
-/* Container dos botões */
+body.light-theme .ki {
+    color: #333; /* Título da marca no tema claro */
+}
+
+/* Botões do cabeçalho */
 .header-buttons {
     display: flex;
-    gap: 15px; /* Espaçamento entre os botões */
-    margin-left: auto; /* Empurra os botões para a direita */
+    gap: 15px;
+    margin-left: auto;
     margin-top: 15px;
     margin-right: 20px;
 }
 
-/* Estilos dos botões do cabeçalho */
-.button, .btn-header, .Saiba {
+.button, .btn-primary, .btn-secondary, .button-2 {
     font-size: 16px;
     padding: 8px 24px;
     color: white;
-    background-color: rgb(54, 230, 243); /* Cor de fundo */
+    background-color: rgb(54, 230, 243); /* Cor padrão */
     border: none;
     border-radius: 30px;
     cursor: pointer;
     transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none; /* Retira o sublinhado */
-    text-align: center; /* Centraliza o texto */
+    text-decoration: none;
+    text-align: center;
 }
 
-.button:hover, .btn-header:hover, .Saiba:hover {
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%); /* Efeito de hover */
-    transform: translateY(-5px); /* Sobe um pouco no hover */
+body.light-theme .button, 
+body.light-theme .btn-primary, 
+body.light-theme .btn-secondary, 
+body.light-theme .button-2 {
+    background-color: #007bff; /* Cor azul padrão para tema claro */
+    color: white;
 }
 
-.button:active, .btn-header:active, .Saiba:active {
-    transform: translate(0, 0.2em); /* Efeito de clique */
-}
-
-.logo {
-    width: 80px;
-    margin-right: 10px;
-}
-
-.brand-name {
-    font-size: 2rem;
-    color: rgb(54, 230, 243);
-}
-
+/* Estilo do Hero Section */
 .hero {
-    display: flex; /* Usar flexbox para alinhar os itens horizontalmente */
-    justify-content: space-between; /* Espaçar os itens de forma adequada */
-    align-items: center; /* Alinhar os itens verticalmente ao centro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 5rem 2rem;
-    background-color: #14142c; /* Fundo atualizado */
+    background-color: #14142c;
 }
 
-.hero-content {
-    flex: 1; /* Garantir que o conteúdo ocupe o espaço restante */
-    text-align: left; /* Alinhar o texto à esquerda */
-    max-width: 50%; /* Limitar a largura do conteúdo de texto */
+body.light-theme .hero {
+    background-color: #f9f9f9; /* Fundo claro */
 }
 
 .hero-title {
@@ -124,114 +122,90 @@ header {
     margin-left: 70px;
 }
 
+body.light-theme .hero-subtitle {
+    color: #666; /* Texto mais escuro no tema claro */
+}
+
+/* Imagem do Hero */
 .hero-image {
-    max-width: 30%; /* Limitar a largura da imagem */
-    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
-    margin-left: 2rem; /* Espaçamento à esquerda da imagem */
+    max-width: 30%;
+    width: 100%;
+    margin-left: 2rem;
     margin-right: 250px;
 }
 
-
-.btn-primary, .btn-secondary {
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 1rem 0.5rem;
-    margin-left: 100px;
+/* Botões principais */
+.btn-primary {
+    margin-left: 70px; /* Ajuste esse valor conforme necessário */
 }
 
 .btn-secondary {
-    padding: 0.8rem 2rem;
-    border: none;
-    border-radius: 30px;
-    font-size: 1.2rem;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    margin: 1rem 0.5rem;
+    margin-left: 10px; /* Ajuste esse valor conforme necessário */
 }
 
+/* Botões principais */
 .btn-primary {
     background-color: rgb(54, 230, 243);
 }
 
-.btn-primary:hover {
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+.btn-primary:hover, .btn-secondary:hover {
+    background: linear-gradient(90deg, rgba(30, 144, 255, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
-.btn-secondary {
-    background-color: rgb(54, 230, 243);
+body.light-theme .btn-primary, body.light-theme .btn-secondary {
+    background-color: #007bff;
 }
 
-.btn-secondary:hover {
-    background: linear-gradient(90deg, rgba(30,144,255,1) 0%, rgba(0,212,255,1) 100%);
+body.light-theme .btn-primary:hover, body.light-theme .btn-secondary:hover {
+    background: linear-gradient(90deg, rgba(0, 123, 255, 1) 0%, rgba(0, 180, 255, 1) 100%);
 }
 
-.descricao-sobre{
+/* Estilo da seção "Sobre" */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: #14142c;
+}
+
+body.light-theme .about {
+    background-color: #f9f9f9;
+}
+
+.about-image {
+    max-width: 30%;
+    width: 100%;
+    margin-left: 150px;
+}
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+}
+
+.descricao-sobre {
     margin: 1rem 0;
     font-size: 1.5rem;
     color: #ccc;
 }
 
-.about {
-    display: flex; /* Usar flexbox para alinhar a imagem e o texto lado a lado */
-    justify-content: space-between; /* Espaçar os itens de forma adequada */
-    align-items: center; /* Alinhar os itens verticalmente ao centro */
-    padding: 5rem 2rem;
-    background-color: #14142c; /* Fundo atualizado */
-    text-align: left; /* Alinhar o texto à esquerda */
+body.light-theme .descricao-sobre {
+    color: #666;
 }
 
-h2{
-    font-size: 3rem;
-    font-weight: 800;
-}
-
-.about-content {
-    flex: 1; /* O conteúdo ocupa o espaço disponível */
-    max-width: 50%; /* Limitar a largura do conteúdo */
-}
-
+/* Seção Benefícios */
 .benefits {
     padding: 5rem 2rem;
     text-align: center;
-    background-color: #14142c; /* Fundo atualizado */
+    background-color: #14142c;
 }
 
-.about-image {
-    max-width: 30%; /* Limitar a largura da imagem */
-    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
-    margin-left: 2rem; /* Espaçamento à esquerda da imagem */
-    margin-left: 150px;
+body.light-theme .benefits {
+    background-color: #ffffff;
 }
 
-.monitoring {
-    display: flex; /* Alinha os elementos horizontalmente */
-    justify-content: space-between; /* Espaça a imagem e o conteúdo */
-    align-items: center; /* Alinha verticalmente ao centro */
-    padding: 5rem 2rem; /* Espaçamento interno */
-    text-align: left; /* Alinhar o texto à esquerda */
-    background-color: #14142c; /* Fundo atualizado */
-}
-
-.monitoring-content {
-    flex: 1; /* O conteúdo ocupa o espaço disponível */
-    max-width: 50%; /* Limitar a largura do conteúdo */
-    padding-left: 2rem; /* Espaçamento à esquerda */
-    margin-left: 100px;
-}
-
-.monitoring-image {
-    max-width: 35%; /* Limitar a largura da imagem */
-    width: 100%; /* Garantir que a imagem ocupe o espaço disponível */
-    margin-right: 5rem; /* Espaçamento entre a imagem e o texto */
-    margin-bottom: 2rem;
-}
-
+/* Itens de Benefícios */
 .benefit-item {
     background-color: #110d29;
     padding: 2rem;
@@ -239,34 +213,96 @@ h2{
     border-radius: 10px;
 }
 
+body.light-theme .benefit-item {
+    background-color: #e6e6e6;
+    color: #333;
+}
+
+/* Seção de Monitoramento */
+.monitoring {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 2rem;
+    background-color: #14142c;
+}
+
+body.light-theme .monitoring {
+    background-color: #ffffff;
+}
+
+.monitoring-content p {
+    margin-bottom: 3rem;
+    font-size: 20px;
+    color: #ccc;
+}
+
+body.light-theme .monitoring-content p {
+    color: #666;
+}
+
+/* Rodapé */
 footer {
     background-color: #111;
     text-align: center;
     padding: 2rem;
+    color: white;
 }
 
 .footer-container img {
-    width: 80px;
-    margin-bottom: 1rem;
+    width: 100px;  /* Reduzindo a largura da imagem para 60px */
+    margin-bottom: 1rem; /* Mantendo o espaçamento abaixo da imagem */
 }
 
-.button-2{
-    font-size: 20px;
-    font-weight: 600;
-    padding: 25px 80px;
-    color: white;
-    background-color: rgb(54, 230, 243); /* Cor de fundo */
-    border: none;
-    border-radius: 30px;
+body.light-theme footer {
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* Interruptor de Tema */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 6px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
     cursor: pointer;
-    transition: background-color 0.3s, transform 0.3s;
-    text-decoration: none; /* Retira o sublinhado */
-    text-align: center; /* Centraliza o texto */
-    margin-left: 190px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
 }
 
-.monitoring-content p {
-    margin-bottom: 3rem; /* Espaçamento entre o parágrafo e o botão */
-    font-size: 20px;
-    margin-left: 5px;
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(54, 230, 243);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
 }
