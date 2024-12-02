@@ -1,78 +1,168 @@
-@font-face {
-    font-family: 'Codec Pro';
-    font-weight: 800; 
-    src: url('fonts/codec-pro-extrabold.woff2') format('woff2'),
-         url('fonts/codec-pro-extrabold.woff') format('woff'),
-         url('fonts/codec-pro-extrabold.ttf') format('truetype');
-}
-
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilo Global */
 body {
     font-family: 'Codec Pro', sans-serif;
     height: 100vh;
-    background-image: url('../imagens/6.png');
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-color: #14142c; /* Fundo escuro padrão */
+    color: white; /* Texto padrão no tema escuro */
+    transition: background-color 0.3s, color 0.3s;
 }
 
-.header h1{
-    font-size: 60px;
-    color:rgb(54, 230, 243);
-    text-align: center;
-    margin-top: 10%;
+body.light-theme {
+    background-color: white; /* Fundo branco no tema claro */
+    color: black; /* Texto preto no tema claro */
 }
 
-h2{
-    text-align: center;
-    color: white;
-}
-
-.text{
+/* Cabeçalho */
+header {
+    background-color: #14142c;
+    padding: 20px;
     display: flex;
-    text-align: center;
-    border-radius: 30px;
-    height: 60px;
-    width: 700px;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.inputs{
+body.light-theme header {
+    background-color: white; /* Cabeçalho branco no tema claro */
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+}
+
+.header-img {
+    width: 50px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.title {
+    font-size: 24px;
+    color: white; /* Texto branco no tema escuro */
+}
+
+body.light-theme .title {
+    color: black; /* Texto preto no tema claro */
+}
+
+/* Botões do cabeçalho */
+.header-buttons {
+    display: flex;
+    align-items: center;
+}
+
+/* Interruptor de Tema */
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+}
+
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 25px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 19px;
+    width: 19px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: rgb(54, 230, 243);
+}
+
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+
+/* Inputs */
+.inputs {
     font-size: 20px;
-    color:rgb(54, 230, 243);
     text-align: center;
     display: flex;
     align-items: center;
     flex-direction: column;
 }
 
-.botao{
+.text {
+    display: flex;
+    text-align: center;
+    border-radius: 30px;
+    height: 60px;
+    width: 700px;
+    background-color: #14142c;
+    color: white;
+    border: 2px solid white;
+    padding-left: 10px;
+}
+
+body.light-theme .text {
+    background-color: white; /* Fundo branco no tema claro */
+    color: black; /* Texto preto no tema claro */
+    border: 2px solid black; /* Borda preta no tema claro */
+}
+
+/* Botão */
+.botao {
     border-radius: 30px;
     height: 60px;
     width: 300px;
-}
-
-.resultado{
-    text-align: center;
+    background-color: rgb(54, 230, 243);
     color: white;
-    font-size: 20px;
-    color:rgb(54, 230, 243);
+    border: none;
+    cursor: pointer;
+}
+
+body.light-theme .botao {
+    background-color: #007bff; /* Azul no tema claro */
+    color: white; /* Texto branco no botão do tema claro */
+}
+
+/* Resultado */
+.resultado {
     text-align: center;
+    font-size: 20px;
+    color: rgb(54, 230, 243);
 }
 
-/* Estilo para o link da seta */
-.back-link {
-    position: absolute;
-    top: 20px; /* Distância do topo */
-    left: 20px; /* Distância da esquerda */
-    z-index: 100; /* Para garantir que fique sobre outros elementos */
+body.light-theme .resultado {
+    color: black; /* Resultado em preto no tema claro */
 }
 
-/* Estilo para a imagem da seta */
-.back-arrow {
-    width: 50px; /* Ajuste o tamanho da seta conforme necessário */
-    height: 50px;
+/* Estilo de texto no tema escuro e claro */
+h1, h2 {
+    text-align: center;
+    color: white; /* Texto branco no tema escuro */
+}
+
+body.light-theme h1, 
+body.light-theme h2 {
+    color: black; /* Texto preto no tema claro */
+}
+
+/* Ajuste para a imagem de seta no tema claro */
+body.light-theme .header-img {
+    filter: invert(1); /* Inverte a cor da imagem para combinar com o tema claro */
 }
