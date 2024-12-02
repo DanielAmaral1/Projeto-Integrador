@@ -7,14 +7,21 @@
     <title>Cálculo de Hop Test</title>
 </head>
 <body>
-    <!-- Link para voltar ao menu -->
-    <a href="../menu/teste-1.html" class="back-link">
-        <img src="../imagens/SETA.png" alt="Voltar ao menu" class="back-arrow">
-    </a>
-    <div class="header">
-        <h1>Cálculo de Hop Test</h1>
-        <h2>Insira os valores abaixo</h2>
+       <!-- Cabeçalho com link para o menu e interruptor de tema -->
+   <header>
+    <div class="header-content">
+        <a href="../menu/teste-1.html" class="back-link">
+            <img src="../imagens/SETA.png" alt="Voltar ao menu" class="header-img" id="headerImage">
+        </a>
+        <h1 class="title">Hop Test</h1>
     </div>
+    <div class="header-buttons">
+        <label class="theme-switch">
+            <input type="checkbox" id="themeSwitch">
+            <span class="slider"></span>
+        </label>
+    </div>
+</header>
     <div class="inputs">
         <div class="distancia">
             <h1>Distância do Salto (m):</h1>
@@ -32,5 +39,34 @@
     </div>
 
     <script src="code.js"></script>
+</body>
+</html>
+<script src="code.js"></script>
+<script>
+    const themeSwitch = document.getElementById('themeSwitch');
+    const headerImage = document.getElementById('headerImage');
+
+    // Carregar tema salvo no LocalStorage
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+        themeSwitch.checked = true;
+        headerImage.src = "../imagens/SETA.png"; // Imagem no tema claro
+    }
+
+    // Alternar entre temas e salvar preferência
+    themeSwitch.addEventListener('change', () => {
+        if (themeSwitch.checked) {
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+            localStorage.setItem('theme', 'light');
+            headerImage.src = "../imagens/SETA.png"; // Imagem no tema claro
+        } else {
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+            localStorage.setItem('theme', 'dark');
+            headerImage.src = "../imagens/SETA.png"; // Imagem no tema escuro
+        }
+    });
+</script>
 </body>
 </html>
